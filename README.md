@@ -173,6 +173,46 @@ The experiment confirmed:
 - Backend response retrieval.
 - Shared workspace visibility.
 
+## Screenshots & Evidence
+
+The following screenshots document the actual setup, audits, and communication workflow performed during the experiment.
+
+### 1. Codex Environment Setup
+
+Concord MCP was installed and configured successfully, with Codex CLI detected as a supported coding client.
+
+![Codex Sandbox Ready](docs/screenshots/01-codex-sandbox-ready.png)
+
+### 2. Backend Audit
+
+The backend agent completed a static analysis of the NestJS application and shared its findings through Concord.
+
+![Backend Audit](docs/screenshots/02-backend-audit.png)
+
+### 3. Frontend Audit
+
+The frontend agent completed its React audit and compared its findings with the backend analysis.
+
+![Frontend Audit](docs/screenshots/03-frontend-audit.png)
+
+### 4. Agent-to-Agent Message
+
+The backend agent sent a coordination message to the frontend agent through Concord.
+
+![Message Sent](docs/screenshots/04-message-sent.png)
+
+### 5. Frontend Response
+
+The frontend agent retrieved the pending message, analyzed the request, and submitted its response.
+
+![Frontend Response](docs/screenshots/05-frontend-response.png)
+
+### 6. Backend Response Retrieval
+
+The backend agent retrieved the frontend response and registered a summary in the shared Concord workspace.
+
+![Backend Response Retrieved](docs/screenshots/06-backend-response-retrieved.png)
+
 ## Key Findings
 
 The coordinated audits identified several areas requiring further review:
